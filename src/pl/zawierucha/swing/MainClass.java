@@ -171,9 +171,18 @@ public class MainClass extends JFrame {
                     result.append("1");
                     num1.append("1");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("1");
                     num1.append("1");
+                } else if (numOfClicks == 2) {
+
+                    // TODO: 11.09.2019
+                    // Result printing.
+
+                    if (sign == Sign.PLUS) {
+                        result.append("1");
+                    }
+                    num2.append("1");
                 }
             } else if (e.getSource() == but2) {
                 if (numOfClicks == 0) {
@@ -181,7 +190,7 @@ public class MainClass extends JFrame {
                     result.append("2");
                     num1.append("2");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("2");
                     num1.append("2");
                 }
@@ -191,7 +200,7 @@ public class MainClass extends JFrame {
                     result.append("3");
                     num1.append("3");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("3");
                     num1.append("3");
                 }
@@ -201,7 +210,7 @@ public class MainClass extends JFrame {
                     result.append("4");
                     num1.append("4");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("4");
                     num1.append("4");
                 }
@@ -211,7 +220,7 @@ public class MainClass extends JFrame {
                     result.append("5");
                     num1.append("5");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("5");
                     num1.append("5");
                 }
@@ -221,7 +230,7 @@ public class MainClass extends JFrame {
                     result.append("6");
                     num1.append("6");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("6");
                     num1.append("6");
                 }
@@ -231,7 +240,7 @@ public class MainClass extends JFrame {
                     result.append("7");
                     num1.append("7");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("7");
                     num1.append("7");
                 }
@@ -241,7 +250,7 @@ public class MainClass extends JFrame {
                     result.append("8");
                     num1.append("8");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("8");
                     num1.append("8");
                 }
@@ -251,7 +260,7 @@ public class MainClass extends JFrame {
                     result.append("9");
                     num1.append("9");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("9");
                     num1.append("9");
                 }
@@ -261,7 +270,7 @@ public class MainClass extends JFrame {
                     result.append("0");
                     num1.append("0");
                     numOfClicks++;
-                } else {
+                } else if (numOfClicks == 1) {
                     result.append("0");
                     num1.append("0");
                 }
@@ -269,17 +278,19 @@ public class MainClass extends JFrame {
                 if (numOfClicks == 1) {
                     sign = Sign.PLUS;
                     result.append(" + ");
+                    numOfClicks++;
                 }
             } else if (e.getSource() == butMinus) {
                 if (numOfClicks == 1) {
                     sign = Sign.MINUS;
                     result.append(" - ");
+                    numOfClicks++;
                 }
             }
 
             textResult.setText(result.toString());
-            System.out.println(Integer.parseInt(num1.toString()) + 5);
-            System.out.println(num2);
+            System.out.println(Integer.parseInt(num1.toString()));
+            System.out.println(Integer.parseInt(num2.toString()));
         }
     }
 }
